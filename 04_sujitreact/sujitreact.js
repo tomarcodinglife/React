@@ -11,7 +11,7 @@ function newElementMethod (ElementLibrary, container) {
 
 const newElementLibrary = {
     tagName : "a",
-    tagInnerHtml : "Click Me",
+    tagInnerHtml : "Click Here",
     tagAttribute : {
         href : "http://google.com",
         target : "_blank"
