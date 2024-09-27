@@ -1,3 +1,5 @@
+const div = document.querySelector("#root")
+
 function newElementMethod (ElementLibrary, container) {
     newElement = document.createElement(ElementLibrary.tagName)
     newElement.innerHTML = ElementLibrary.tagInnerHtml
@@ -18,7 +20,7 @@ const newElementLibrary = {
     }
 }
 
-const div = document.querySelector("#root")
+
 
 
 newElementMethod(newElementLibrary, div)
