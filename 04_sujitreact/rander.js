@@ -1,18 +1,6 @@
-// import rander from '.rander/'
+console.log("Hi")
 
-const div = document.querySelector("#root")
-
-const newElementLibrary = {
-    tagName : "a",
-    tagInnerHtml : "Click Here",
-    tagAttribute : {
-        href : "http://google.com",
-        target : "_blank"
-    },
-}
-
-
-function newElementMethod (ElementLibrary, container) {
+function rander (ElementLibrary, container) {
     newElement = document.createElement(ElementLibrary.tagName)
     newElement.innerHTML = ElementLibrary.tagInnerHtml
     for (const properties in ElementLibrary.tagAttribute) {
@@ -21,10 +9,3 @@ function newElementMethod (ElementLibrary, container) {
     }
     container.appendChild(newElement)
 }
-
-
-
-
-newElementMethod(newElementLibrary, div)
-
-
