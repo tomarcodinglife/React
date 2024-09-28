@@ -22,9 +22,10 @@ createRoot(document.getElementById('root'))
 .render(
 
   // anotherElement
-  reactElement
-  // <StrictMode>
-  //   <MyApp />
-  //   <App/>
-  // </StrictMode>
+
+  <StrictMode>
+    <MyApp />
+    <App/>
+    {reactElement}
+  </StrictMode>
 )
