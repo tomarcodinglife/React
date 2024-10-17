@@ -15,10 +15,27 @@ function App() {
   }
 
   let decrease = () => {
-    counter = counter - 5
-    setCounter(counter)
-    console.log(counter)
+    if(counter >=5){
+      counter = counter - 5
+      setCounter(counter)
+    }else{
+      counter = 0
+      setCounter(counter)
+    }
+    // counter = counter - 5
+    // setCounter(counter)
+    // console.log(counter)
   }
+
+
+  // let decrease = () => {
+  //   if(counter < 5) {
+  //     counter = counter - 5
+  //     setCounter(counter)
+  //   }else if(counter === 0 || counter > 0){
+  //     counter = 0
+  //     setCounter(counter)
+  //   }
 
   return (
     <>
