@@ -1,4 +1,4 @@
-// import rander from '.rander/'
+import rander from '.rander/'
 
 const div = document.querySelector("#root")
 
@@ -23,8 +23,5 @@ function newElementMethod (ElementLibrary, container) {
 }
 
 
-
-
 newElementMethod(newElementLibrary, div)
-
 
