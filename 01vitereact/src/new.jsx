@@ -1,6 +1,6 @@
 function MyFunction () {
     return (
-        <h3>Sujit Tomar | New File With Vite</h3>
+        <h3>Sujit Tomar | New File With Vite & Tomar</h3>
     )
 
 }
