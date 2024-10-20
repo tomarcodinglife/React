@@ -42,12 +42,10 @@ function App() {
       <h1>Sujit Kumar Singh</h1>
       <h2>Counter Value {counter}</h2>
       <span>
-        <button onClick={increase}>Increase +5 </button>
-        <button onClick={decrease}>Decrease -5</button>
+        <button onClick={increase}>Increase (+5) </button>
+        <button onClick={decrease}>Decrease (-5)</button>
       </span>
-
     </>
   )
 }
-
 export default App

@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <h1 className='text-yellow-500 p-5 bg-red-800 rounded-xl'>Sujit Kumar Singh Coding React with Tailwind</h1>
+      <h1 className='bg-green-400 text-black'>Sujit Kumar Singh</h1>
     </>
   )
 }
