@@ -3,7 +3,6 @@ import { createRoot } from 'react-dom/client'
 import React from 'react'
 import App from './App.jsx'
 import ReactDom from 'react-dom/client'
-
 import {jsx as _jsx} from "react/jsx-runtime"
 
 function MyApp () {
