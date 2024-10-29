@@ -1,6 +1,4 @@
 import { useState, useCallback, useEffect, useRef} from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
@@ -49,7 +47,7 @@ function App() {
 
                 <input type="text" placeholder='Password' readOnly value={password} className='w-full h-10 rounded-md m-2 border-none p-2 
                 active:border-none hover:border-none' ref={passwordRef}/>
-                
+
                 <button className='w-20 h-10 rounded-lg m-2 active:border-none hover:border-none'>Copy</button>
 
             </div>
