@@ -8,6 +8,7 @@ function App() {
   const [password, setPassword] = useState("")
   const [value, setValue] = useState()
 
+  
   const passwordRef = useRef(null)
 
   const passwordGenerator = useCallback(() =>{
@@ -35,6 +36,21 @@ function App() {
   }, [password])
 
 
+  /* ---------------------------------------------------------------------- */
+  
+  function displayMessage (str) {
+    alert (str)
+  }
+
+  function copyBtn () {
+    displayMessage("Text Copied");
+    copyPasswordToClipboard();
+  }
+
+  /* ---------------------------------------------------------------------- */
+
+
+
   useEffect(() => {passwordGenerator()}, [length, numberAllowed, charAllowed, passwordGenerator])
 
   return (
@@ -48,7 +64,7 @@ function App() {
                 <input type="text" placeholder='Password' readOnly value={password} className='w-full h-10 rounded-md m-2 border-none p-2 
                 active:border-none hover:border-none' ref={passwordRef}/>
 
-                <button className='w-20 h-10 rounded-lg m-2 active:border-none hover:border-none'>Copy</button>
+                <button className='w-20 h-10 rounded-lg m-2 active:border-none hover:border-none' onClick={copyBtn}>Copy</button>
 
             </div>
             <div className='w-full inline-flex object-center m-2'>
@@ -74,7 +90,7 @@ function App() {
                 <span  className='inline-flex'>
 
                     <input type="checkbox" defaultChecked={charAllowed} id='charAllowed'
-                    onChange={() => {setCharAllowed((pre) => !pre); }} />
+                    onChange={() => {setCharAllowed((pre) => !pre); }}/>
 
                     <label htmlFor="" className='m-1 text-red-600 font-semibold'>Character</label>
 
