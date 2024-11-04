@@ -8,8 +8,7 @@ function App() {
   const [password, setPassword] = useState("")
   const [value, setValue] = useState()
 
-  
-  const passwordRef = useRef(null)
+  const passwordRef = useRef(null) /* it is use for password copy refrence from windows at clipboard */
 
   const passwordGenerator = useCallback(() =>{
 
