@@ -27,3 +27,11 @@ npm i
 ```terminal
 npm run dev
 ```
+
+## Syntax Call Name
+### fragment
+```jsx
+    <>
+    
+    </>
+```
