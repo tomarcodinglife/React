@@ -1,5 +1,5 @@
-import Sujit from "./Sujit";
-import Tomar from "./Tomar";
+import Sujit from "./sujit";
+import Tomar from "./tomar";
 
 function App() {
   return (
