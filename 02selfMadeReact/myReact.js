@@ -10,7 +10,6 @@
             href : 'https://google.com',
             target: '_blank'
         }
-        
     }
 
     let divtag = {
