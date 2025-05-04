@@ -18,7 +18,7 @@ npx create-react-app 01basicreact
 npm create vite@latest
 ```
 
-### for NPM install
+### for NPM install (Node Module)
 ```terminal
 npm i
 ```
