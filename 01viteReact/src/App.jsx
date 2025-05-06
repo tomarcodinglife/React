@@ -3,7 +3,6 @@ import Tomar from "./tomar"
 
 
 function App() {
-
     const username = "Sujit Tomar"
 
   return (
