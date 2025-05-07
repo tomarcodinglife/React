@@ -35,3 +35,6 @@ npm run dev
     
     </>
 ```
+
+# Tailwind Install (vite)
+
