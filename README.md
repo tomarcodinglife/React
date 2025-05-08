@@ -56,7 +56,7 @@ Add the @tailwindcss/vite plugin to your Vite configuration.
     import tailwindcss from '@tailwindcss/vite'
 
     export default defineConfig({
-    lugins: [
+    plugins: [
         tailwindcss(),
     ],
 })
