@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <h1 className="bg-amber-400 text-black rounded-2xl p-4 m-2">
+      <h1 className="bg-amber-400 text-black rounded-2xl p-4 mb-4">
         Tailwind Work Properly Now
       </h1>
       <article class="rounded-xl border border-gray-700 bg-gray-800 p-4">
