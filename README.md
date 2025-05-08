@@ -38,3 +38,63 @@ npm run dev
 
 # Tailwind Install (vite)
 
+## Install Tailwind CSS
+Install tailwindcss and @tailwindcss/vite via npm.
+
+``` terminal 
+
+npm install tailwindcss @tailwindcss/vite
+
+```
+
+## Configure the Vite plugin
+Add the @tailwindcss/vite plugin to your Vite configuration.
+
+```jsx
+
+    import { defineConfig } from 'vite'
+    import tailwindcss from '@tailwindcss/vite'
+
+    export default defineConfig({
+    lugins: [
+        tailwindcss(),
+    ],
+})
+
+```
+## Import Tailwind CSS 
+Add an @import to your CSS file that imports Tailwind CSS.
+
+```css
+@import "tailwindcss";
+```
+
+## Start your build process
+Run your build process with npm run dev or whatever command is configured in your package.json file.
+
+```terminal
+
+    npm run dev
+    
+```
+
+# React functional Components (boilerplate Code)
+React snippets plugin -> rfce 
+
+```jsx
+import React from 'react'
+
+function functionName(){
+    return (
+        <div>
+        Content
+        </div>
+    )
+}
+export default functionName
+
+```
+
+
+
+
