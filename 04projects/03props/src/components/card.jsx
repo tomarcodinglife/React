@@ -2,7 +2,7 @@ import React from 'react';
 
 function Card({card_profile_Name, card_work_type}){
     return(
-        <div>
+        <div className='p-5'>
             <a href="#" className="group relative block bg-black">
                 <img
                     alt=""
@@ -21,6 +21,7 @@ function Card({card_profile_Name, card_work_type}){
                                 perferendis hic asperiores quibusdam quidem voluptates doloremque
                                 reiciendis nostrum harum. Repudiandae?
                             </p>
+                            <button className='bg-amber-500 rounded-2xl'>More</button>
                         </div>
                     </div>
                 </div>

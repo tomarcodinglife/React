@@ -87,7 +87,7 @@ import React from 'react'
 function functionName(){
     return (
         <div>
-        Content
+            Content
         </div>
     )
 }
