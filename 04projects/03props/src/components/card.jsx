@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Card({card_profile_Name, card_work_type}){
-    return(
+    return( 
         <div className='p-5'>
             <a href="#" className="group relative block bg-black">
                 <img
