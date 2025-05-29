@@ -1,6 +1,7 @@
 import React, { useCallback } from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
+import { useRef } from 'react'
 // import { useCallback } from 'react'
 import './App.css'
 
@@ -28,50 +29,86 @@ function App() {
 
   useEffect(()=>{passwordGenerator()}, [length, numbersAllowed, charactersAllowed, passwordGenerator])
 
-  const copyPassword = () => {
-    navigator.clipboard.writeText(password)
-      .then(()=>{
-        alert("Password Copied")
-      })
-      .catch(()=>{
-        alert("Faild to copied password")
-      })
-  }
+  const copyPassword = useRef(null)
+
+  const copyPasswordClipBoard = useCallback(()=>{
+    copyPassword.current?.select()
+    window.navigator.clipboard.writeText(password)
+  },[password])
+
+  // const copyPassword = () => {
+  //   navigator.clipboard.writeText(password)
+  //     .then(()=>{
+  //       alert("Password Copied")
+  //     })
+  //     .catch(()=>{
+  //       alert("Faild to copied password")
+  //     })
+  // }
+
+
 
   return (
     <>
-      <div className='h-screen w-full duration-300 m-0 p-0 bg-gray-800 flex flex-col justify-center items-center '>
-        <div className='bg-gray-700 p-6 rounded-lg shadow-lg'>
-          
-          <div className='flex flex-row m-4 gap-4 items-center justify-center'>
-              <h1 className='text-white text-2xl uppercase font-bold justify-center items-center'>Password Generator</h1>
+      <div className="h-screen w-full bg-gray-800 flex flex-col justify-center items-center p-4">
+        <div className="bg-gray-700 p-4 sm:p-6 rounded-lg shadow-lg w-full max-w-md">
+    
+        <h1 className="text-white text-xl sm:text-2xl uppercase font-bold text-center mb-4">
+          Password Generator
+        </h1>
+
+        {/* Input & Button Inline */}
+        <div className="flex w-full mt-2">
+          <input
+            type="text"
+            value={password}
+            ref = {copyPassword}
+            readOnly
+            className="flex-grow px-3 py-2 rounded-l-md bg-gray-100 text-gray-700 font-semibold focus:outline-none text-sm"
+          />
+          <button
+            onClick={copyPasswordClipBoard}
+            className="px-3 py-2 bg-blue-500 text-white font-bold rounded-r-md hover:bg-blue-600 text-sm"
+          >
+            Copy
+          </button>
+        </div>
+
+        {/* Controls - Responsive Stack */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mt-4">
+          <div className="flex items-center gap-2">
+            <input
+              type="range"
+              min={8}
+              max={20}
+              value={length}
+              className="cursor-pointer bg-yellow-500 rounded-lg"
+              onChange={(e) => setLength(Number(e.target.value))}
+            />
+            <label className="text-white text-sm">Length: {length}</label>
           </div>
-        
-          <div className='flex flex-row items-center justify-center'>
-              <input type="text" value={password} readOnly className='outline-none bg-gray-100 text-gray-700 rounded-md p-2 font-bold  w-full py-1 px-3 '/>
-              <button className='bg-blue-500 text-white rounded-md p-1 font-bold shrink-0 h-8 hover:bg-gray'>Copy</button>
+
+          <div className="flex items-center gap-2">
+            <input
+              type="checkbox"
+              checked={numbersAllowed}
+              onChange={() => setNumbersAllowed((prev) => !prev)}
+            />
+            <label className="text-white text-sm">Number</label>
           </div>
 
-          <div className='flex flex-row items-center justify-center gap-2'>
-
-              <div className='flex flex-row m-4 gap-1 items-center justify-center' >
-                <input type="range" min={8} max={20} value={length} className='cursor-pointer bg-yellow-500 h- rounded-lg' onChange={(e)=>{Number(setLength(e.target.value))}}/>
-                <label htmlFor="" className='text-white'>Length:{length}</label>
-              </div>
-
-              <div className='flex flex-row m-4 gap-1 items-center justify-center'>
-                <input type="checkbox" defaultChecked={numbersAllowed} id='numberInput' onChange={()=>{setNumbersAllowed((prev) => !prev)}} />
-                <label htmlFor="" className='text-white'>Number</label>
-              </div>
-
-              <div className='flex flex-row m-4 gap-1 items-center justify-center'>
-                <input type="checkbox" defaultChecked={charactersAllowed} id='numberInput' onChange={()=>{setCharactersAllowed((prev) => !prev)}} />
-                <label htmlFor="" className='text-white'>Char</label>
-              </div>
-
+          <div className="flex items-center gap-2">
+            <input
+              type="checkbox"
+              checked={charactersAllowed}
+              onChange={() => setCharactersAllowed((prev) => !prev)}
+            />
+            <label className="text-white text-sm">Char</label>
           </div>
         </div>
       </div>
+</div>
+
     </>
   )
 }
