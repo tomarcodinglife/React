@@ -49,7 +49,7 @@ function App() {
         
           <div className='flex flex-row items-center justify-center'>
               <input type="text" value={password} readOnly className='outline-none bg-gray-100 text-gray-700 rounded-md p-2 font-bold  w-full py-1 px-3 '/>
-              <button className='bg-blue-500 text-white rounded-md p-1 font-bold shrink-0 h-8 '>Copy</button>
+              <button className='bg-blue-500 text-white rounded-md p-1 font-bold shrink-0 h-8 hover:bg-gray'>Copy</button>
           </div>
 
           <div className='flex flex-row items-center justify-center gap-2'>
@@ -78,48 +78,3 @@ function App() {
 
 
 export default App
-
-
-{/* <div className='bg-gray-700 p-6 rounded-lg shadow-lg'>
-          <h1 className='text-2xl text-white mb-4'>Password Generator</h1>
-          <div className='mb-4'>
-            <label className='text-white'>Length: </label>
-            <input 
-              type='number' 
-              value={length} 
-              onChange={(e) => setLength(e.target.value)} 
-              className='ml-2 p-1 rounded'
-            />
-          </div>
-          <div className='mb-4'>
-            <label className='text-white'>
-              <input 
-                type='checkbox' 
-                checked={numbersAllowed} 
-                onChange={(e) => setNumbersAllowed(e.target.checked)} 
-              />
-              Include Numbers
-            </label>
-          </div>
-          <div className='mb-4'>
-            <label className='text-white'>
-              <input 
-                type='checkbox' 
-                checked={charactersAllowed} 
-                onChange={(e) => setCharactersAllowed(e.target.checked)} 
-              />
-              Include Special Characters
-            </label>
-          </div>
-          <button 
-            onClick={passwordGenerator} 
-            className='bg-blue-500 text-white p-2 rounded hover:bg-blue-600'
-          >
-            Generate Password
-          </button>
-          {password && (
-            <div className='mt-4 text-white'>
-              <strong>Password: </strong>{password}
-            </div>
-          )}
-        </div> */}
