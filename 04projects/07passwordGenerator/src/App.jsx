@@ -21,7 +21,7 @@ function App() {
       characters += '!@#$%^&*()_+[]{}|;:,.<>?'
     }
     for (let i = 0; i < length; i++) {
-      const randomIndex = Math.floor(Math.random() * characters.length)
+      const randomIndex = Math.floor(Math.random() * characters.length + 1)
       password += characters[randomIndex]
     }
     setPassword(password)
@@ -33,6 +33,7 @@ function App() {
 
   const copyPasswordClipBoard = useCallback(()=>{
     copyPassword.current?.select()
+    copyPassword.current?.setSelectionRange(0, 999)
     window.navigator.clipboard.writeText(password)
   },[password])
 
