@@ -16,12 +16,15 @@ function App() {
     let characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
     if (numbersAllowed) {
       characters += '0123456789'
+      
     }
     if (charactersAllowed) {
       characters += '!@#$%^&*()_+[]{}|;:,.<>?'
     }
-    for (let i = 0; i < length; i++) {
-      const randomIndex = Math.floor(Math.random() * characters.length + 1)
+    for (let i = 0; i <length; i++) {
+      const randomIndex = Math.floor(Math.random() * characters.length)
+      console.log(length);
+      console.log(randomIndex, characters[randomIndex])
       password += characters[randomIndex]
     }
     setPassword(password)
