@@ -1,4 +1,3 @@
-import React from 'react'
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -9,9 +8,7 @@ function App() {
 
   return (
     <>
-      <div className='h-screen w-full bg-gray-700'>
-        <h1 className='bg-gray-600 text-yellow-700' >Sujit Tomar</h1>
-      </div>
+      <h1 className='text-white bg-gray-700'>Sujit Kumar Singh</h1>
     </>
   )
 }
