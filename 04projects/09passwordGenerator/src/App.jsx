@@ -1,7 +1,4 @@
-import React, { useCallback } from 'react'
-import { useState } from 'react'
-import { useEffect } from 'react'
-import { useRef } from 'react'
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 // import { useCallback } from 'react'
 import './App.css'
 
@@ -12,21 +9,21 @@ function App() {
   const [password, setPassword] = useState('')
 
   const passwordGenerator = useCallback(() => {
-  let characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  const numberChars = '0123456789';
-  const specialChars = '!@#$%^&*()_+[]{}|;:,.<>?';
+  const LETTERS = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  const NUMBERS = '0123456789';
+  const SPECIALS = '!@#$%^&*()_+[]{}|;:,.<>?';
 
-  let finalChars = characters;
+  let finalChars = LETTERS;
   let guaranteedChars = [];
 
   if (numbersAllowed) {
-    finalChars += numberChars;
-    guaranteedChars.push(numberChars[Math.floor(Math.random() * numberChars.length)]);
+    finalChars +=NUMBERS;
+    guaranteedChars.push(NUMBERS[Math.floor(Math.random() * NUMBERS.length)]);
   }
 
   if (charactersAllowed) {
-    finalChars += specialChars;
-    guaranteedChars.push(specialChars[Math.floor(Math.random() * specialChars.length)]);
+    finalChars += SPECIALS;
+    guaranteedChars.push(SPECIALS[Math.floor(Math.random() * SPECIALS.length)]);
   }
 
   // Fill the rest of password
@@ -35,25 +32,13 @@ function App() {
     const randomIndex = Math.floor(Math.random() * finalChars.length);
     password += finalChars[randomIndex];
   }
-npm install tailwindcss @tailwindcss/vite
+
 
   // Optionally: shuffle password to randomize guaranteed positions
   password = password.split('').sort(() => 0.5 - Math.random()).join('');
 
   setPassword(password);
 }, [length, numbersAllowed, charactersAllowed]);
-
-
-
-
-
-
-
-
-
-
-
-
 
   useEffect(()=>{passwordGenerator()}, [length, numbersAllowed, charactersAllowed, passwordGenerator])
 
@@ -122,8 +107,10 @@ npm install tailwindcss @tailwindcss/vite
               type="checkbox"
               checked={numbersAllowed}
               onChange={() => setNumbersAllowed((prev) => !prev)}
+              id='include-number'
+
             />
-            <label className="text-white text-sm">Number</label>
+            <label className="text-white text-sm" htmlFor='include-number'>Number</label>
           </div>
 
           <div className="flex items-center gap-2">
@@ -131,8 +118,9 @@ npm install tailwindcss @tailwindcss/vite
               type="checkbox"
               checked={charactersAllowed}
               onChange={() => setCharactersAllowed((prev) => !prev)}
+              id='include-character'
             />
-            <label className="text-white text-sm">Char</label>
+            <label className="text-white text-sm" htmlFor='include-character'>Char</label>
           </div>
         </div>
       </div>
