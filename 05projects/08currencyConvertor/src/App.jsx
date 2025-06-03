@@ -4,10 +4,10 @@ import { InputBox } from './components'
 import useCurrencyInfo from './hooks/useCurrencyInfo'
 
 function App() {
-  const [amount, setAmount] = useState(0)
+  const [amount, setAmount] = useState()
   const [to, setTo] = useState("usd")
   const [from, setFrom] = useState("inr")
-  const [convertedAmount, setConvertetAmount] = useState(0)
+  const [convertedAmount, setConvertetAmount] = useState()
 
   const currencyInfo = useCurrencyInfo(from)
   const options = Object.keys(currencyInfo)
