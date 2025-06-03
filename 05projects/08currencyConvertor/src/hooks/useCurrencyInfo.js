@@ -11,8 +11,13 @@ function useCurrencyInfo (currency) {
         .then((response)=>{
             setData(response[currency])
         })
+        .catch((e)=>{
+            return `error = ${e}`
+        })
     },[currency])
+    
     return data
+
 }
 
 export default useCurrencyInfo;
