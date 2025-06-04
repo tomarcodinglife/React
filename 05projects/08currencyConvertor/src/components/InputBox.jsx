@@ -9,7 +9,8 @@ function InputBox({
     selectCurrency = "usd",
     amountDisable = false,
     currencyDisable = false,
-    className = ""
+    className = "",
+    inputId,
 
 }){
     const amountInputId = useId()
@@ -20,7 +21,7 @@ function InputBox({
                 <label className="text-black/40 mb-2 inline-block" htmlFor={amountInputId}>{label}</label>
 
                 <input 
-                    id={amountInputId}
+                    id={inputId}
                     className="outline-none w-full bg-transparent py-1.5" 
                     type="number" 
                     placeholder="Amount" 

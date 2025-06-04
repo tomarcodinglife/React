@@ -45,6 +45,7 @@ function App() {
                                 onCurrencyChange={(currency)=>setFrom(currency)} 
                                 selectCurrency={from}
                                 onAmountChange={(amount)=>setAmount(amount)}
+                                inputId="fromAmount"
                             />
                         </div>
                         <div className="relative w-full h-0.5">
@@ -64,6 +65,7 @@ function App() {
                                 onCurrencyChange={(currency)=>setTo(currency)}
                                 selectCurrency={to}
                                 amountDisable
+                                inputId="toAmount"
                                 
                             />
                         </div>
