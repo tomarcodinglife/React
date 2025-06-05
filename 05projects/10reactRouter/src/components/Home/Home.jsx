@@ -1,10 +1,10 @@
 import React from "react";
 import {Link, NavLink} from 'react-router-dom'
 
-function Header(){
-    return (
-        <div>Header</div>
+function Home(){
+    return(
+        <div>home</div>
     )
 }
 
-export default Header
+export default Home
