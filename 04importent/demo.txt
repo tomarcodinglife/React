@@ -1,4 +1,4 @@
-What You’ll Learn in This Video?
+What You’ll Learn in This Course?
 00:00:00 - Introduction to React JS  
 00:05:24 - React JS Setup with Vite tool  
 00:19:16 - Install and setup React in macOS  
