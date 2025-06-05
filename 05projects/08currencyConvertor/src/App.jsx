@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useId } from 'react'
 import { useState } from 'react'
 import { InputBox } from './components'
 import useCurrencyInfo from './hooks/useCurrencyInfo'
@@ -18,6 +18,9 @@ function App() {
     setConvertetAmount(amount)
     setAmount(convertedAmount)
   }
+
+  // const fromInputId = useId()
+  // const toInputId = useId()
 
   const convert = () => setConvertetAmount(amount * currencyInfo[to])
   const bgurl = "https://static.vecteezy.com/system/resources/previews/014/462/169/non_2x/economy-and-finance-background-financial-business-statistics-with-candlesticks-and-bar-chart-vector.jpg"
@@ -45,7 +48,7 @@ function App() {
                                 onCurrencyChange={(currency)=>setFrom(currency)} 
                                 selectCurrency={from}
                                 onAmountChange={(amount)=>setAmount(amount)}
-                                inputId="fromAmount"
+                                // id = {fromInputId}
                             />
                         </div>
                         <div className="relative w-full h-0.5">
@@ -65,7 +68,7 @@ function App() {
                                 onCurrencyChange={(currency)=>setTo(currency)}
                                 selectCurrency={to}
                                 amountDisable
-                                inputId="toAmount"
+                                // id = {toInputId}
                                 
                             />
                         </div>
