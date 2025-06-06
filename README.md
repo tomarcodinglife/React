@@ -28,7 +28,7 @@ npm i
 npm run dev
 ```
 
-## Syntax Call Name
+## Syntax Name
 ### fragment
 ```jsx
     <>
