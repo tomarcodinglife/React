@@ -2,23 +2,25 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  let fruit = "Apple"
-  let quantity = 10
+  const [fruit, setFruit] = useState("Apple")
+  const [quantity, setQuantity] = useState(1)
 
   const  fruitFunction = () =>{
-    fruit = "Grapes"
+    setFruit("Grapes")
   }
 
   const addQuantity = ()=>{
-    quantity+1
+    setQuantity (quantity+1)
   }
 
   return (
     <>
       <h1>Fruits :{fruit}</h1>
       <h3>Quantity:{quantity}</h3>
+      <button onClick={fruitFunction}>Grapes Fruit</button>
+      <button onClick={()=>setFruit("Mango")}>Mango Fruit</button>
       <button onClick={addQuantity}>Add Quantity</button>
-      <button onClick={fruitFunction}>Change Fruit</button>
+      <button onClick={()=> setQuantity(quantity-1)}>Remove Quantity</button>
     </>
   )
 }
