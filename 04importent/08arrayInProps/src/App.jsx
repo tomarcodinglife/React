@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import User from './User'
 import UserDetails from './UserDetails'
+import ArrayData from './ArrayData'
 
 function App() {
   const [count, setCount] = useState(1)
+  const [student, setStudent] = useState("John Doe")
 
   let users = [
     { id: 1, name: 'John', age: 30, email: "test@google.com", country: "USA", mobile: "1234567890", college: "ABC University" },
@@ -42,6 +44,17 @@ function App() {
 
           <UserDetails user={users[count-1]} />
       </div>
+      <hr />
+      --------------------------------------------------------------------
+      <ArrayData user={users[count].name} />
+      <hr />
+      {student && (
+        <div style={{ textAlign: "center", marginTop: "20px", padding: "20px", border: "1px solid black" }}>
+          <h1>Student Name:{student}</h1>
+          <button onClick={() => setStudent("Amit")}>Update Student</button>
+        </div>
+      )}
+
     </div>
   )
 }
