@@ -13,7 +13,7 @@ function Form (){
     const handlePasswordChange = (e) => setPassword(e.target.value);
     const handleGenderChange = (e) => setGender(e.target.value);
     const handleLanguageChange = (e) => {
-        const { value, checked } = (e.target);    
+        const { value, checked } = (e.target);
         setLanguages(prev => 
             checked ? [...prev, value] : prev.filter(lang => lang !== value)
         );
@@ -72,10 +72,10 @@ function Form (){
                         </div>
                     </div>
 
-                    <input type="submit" value="Submit" class='button' />
-                    <input type="reset" value="Reset" onClick={handleReset} class='button'/>
+                    <input type="submit" value="Submit" className='button' />
+                    <input type="reset" value="Reset" onClick={handleReset} className='button'/>
                 </form> 
-           </div>\
+           </div>
            <div>
                 <div className='output-section'>
                     <h2>Output</h2>
@@ -89,5 +89,7 @@ function Form (){
         </div>
     )
 }
+
+
 
 export default Form;
