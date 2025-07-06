@@ -2,11 +2,11 @@ import { useState } from 'react'
 import Form from './form'
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
 
   return (
     <>
-      <h1>onChange Event</h1>
+      {/* <h1>onChange Event</h1> */}
       <Form />
     </>
   )
