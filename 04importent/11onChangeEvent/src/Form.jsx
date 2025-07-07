@@ -7,6 +7,7 @@ function Form (){
     const [password, setPassword] = useState('');
     const [gender, setGender] = useState('');
     const [languages, setLanguages] = useState([]);
+    const [nation, setNation] = useState('india'); 
 
     const handleNameChange = (e) => setName(e.target.value);
     const handleEmailChange = (e) => setEmail(e.target.value);  
@@ -18,6 +19,8 @@ function Form (){
             checked ? [...prev, value] : prev.filter(lang => lang !== value)
         );
     };
+    const handleNationChange = (e) => setNation(e.target.value);
+
 
     // Reset function to clear all fields
     const handleReset = () => {
@@ -72,8 +75,19 @@ function Form (){
                         </div>
                     </div>
 
-                    <input type="submit" value="Submit" className='button' />
-                    <input type="reset" value="Reset" onClick={handleReset} className='button'/>
+                    <div id='nation' className='input-section'>
+                        <label htmlFor="nation">Nation:</label>
+                        <select name="nation" id="nation" onChange={handleNationChange} value={nation} defaultValue={'india'}>
+                            <option value="select">Select</option>
+                            <option value="usa">USA</option>
+                            <option value="uk">UK</option>
+                            <option value="india">India</option>
+                            <option value="canada">Canada</option>
+                        </select>
+                    </div>
+
+                        <input type="submit" value="Submit" className='button' />
+                        <input type="reset" value="Reset" onClick={handleReset} className='button'/>
                 </form> 
            </div>
            <div>
@@ -84,6 +98,7 @@ function Form (){
                     <p><strong>Password:</strong> {password}</p>
                     <p><strong>Gender:</strong> {gender}</p>
                     <p><strong>Languages:</strong> {languages.join(', ')}</p>
+                    <p><strong>Nation:</strong> {nation}</p>
                 </div>
            </div>
         </div>
