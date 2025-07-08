@@ -1,4 +1,16 @@
 import { useState } from 'react'
+import Data from './components/data'
+import User from './components/User'
+
+const userDivStyle = {
+  display: "flex",
+  flexWrap: "wrap",
+  justifyContent: "center",
+  alignItems: "center",
+  gap: "10px",
+  padding: "10px",
+  backgroundColor: "#edf7f7",
+}
 
 
 function App() {
@@ -6,7 +18,16 @@ function App() {
 
   return (
     <>
-      <h1>Sujit</h1>
+      <div>
+        <h1>Reuse Component</h1>
+      <div style={userDivStyle}>
+        {
+          Data.map((user) => (
+            <User key={user.id} data={user} />
+          ))
+        }
+      </div>
+      </div>
     </>
   )
 }
