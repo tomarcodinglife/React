@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import College from './components/College'
+import Data from './components/data'
 
 
 function App() {
@@ -8,9 +9,17 @@ function App() {
   return (
     <>
        <h1>Test</h1>
-       <College data={}/>
+       <div>
+        {
+          Data.map((college, index) => {
+            return (
+              <College key={index} data={college} />
+            )
+          })
+        }
+       </div>
     </>
   )
-}x
+}
 
 export default App
