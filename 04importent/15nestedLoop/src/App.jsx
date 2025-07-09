@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import College from './components/College'
 
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
   return (
     <>
        <h1>Test</h1>
+       <College data={}/>
     </>
   )
 }x
