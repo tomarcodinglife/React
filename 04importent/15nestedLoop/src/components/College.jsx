@@ -1,7 +1,17 @@
 
+let style = {
+    backgroundColor: "lightblue",
+    padding: "20px",
+    borderRadius: "10px",
+    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+    margin: "10px",
+    fontFamily: "Arial, sans-serif",
+}
+
+
 const College = ({ data }) => {
   return (
-    <div className="college">
+    <div className="college" style={style}>
         <h2>{data.collegeName}</h2>
         <p>Location: {data.location}</p>
         <p>Established: {data.established}</p>
