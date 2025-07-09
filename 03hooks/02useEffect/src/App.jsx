@@ -1,33 +1,34 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Addition from './components/Addition'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [num1, seNum1] = useState(0)
+  const [num2, seNum2] = useState(0)
+
+  const handleChange1 = (e) => (
+    seNum1(e.target.value) // Update num1 state with the input value
+  )
+
+  const handleChange2 = (e) => (
+    seNum2(e.target.value) // Update num2 state with the input value
+  )
+
 
   return (
     <>
+      <h1>Addition Function</h1>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <label htmlFor="">Number1</label>
+        <input type="number" value={num1} onChange={handleChange1} />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <br />
+      <div>
+        <label htmlFor="">Number2</label>
+        <input type="number" value={num2} onChange={handleChange2} />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+      <br />
+      <Addition a={num1} b={num2} />
     </>
   )
 }
