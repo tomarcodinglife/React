@@ -13,7 +13,7 @@ function App() {
     <>
       <div>
         <h1>Digital Clock</h1>
-        <select name="color" id="color" onChange={handleColorChange} value={propColor}>
+        <select name="color" id="color" onChange={handleColorChange}>
           <option value="red">Red</option>
           <option value="green">Green</option>
           <option value="blue">Blue</option>
