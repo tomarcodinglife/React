@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <h1>Inline CSS</h1>
+      <h1>Inline CSS With React</h1>
     </>
   )
 }

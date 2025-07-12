@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-      <h1>CSS Module</h1>
+      <h1>CSS Module with React</h1>
     </>
   )
 }

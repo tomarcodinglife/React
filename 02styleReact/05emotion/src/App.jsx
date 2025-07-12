@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <h1>emotions css</h1>
+      <h1>emotions css with React</h1>
     </>
   )
 }

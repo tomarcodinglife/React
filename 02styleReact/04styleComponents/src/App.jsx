@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <h1>Style Component</h1>
+      <h1>Style Component with React</h1>
     </>
   )
 }
