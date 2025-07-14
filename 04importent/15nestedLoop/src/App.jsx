@@ -2,6 +2,9 @@ import { useState } from 'react'
 import College from './components/College'
 import Data from './components/data'
 
+const myFun = (name) => {
+  console.log(name);
+}
 
 function App() {
   const [count, setCount] = useState(0)
