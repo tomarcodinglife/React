@@ -20,7 +20,8 @@ function App() {
 
   const handleButton = () => {
       startTransition(async() => {
-        await new Promise((res) => setTimeout(res, 2000))
+        await new Promise((res) => setTimeout(res, 2000));
+        console.log('Transition completed')
       })
   }
 
