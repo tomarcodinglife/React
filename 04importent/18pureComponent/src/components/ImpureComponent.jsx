@@ -5,10 +5,9 @@ let Count = 0; // this is a global variable and it will be used in the inside co
 function ImpureComponent() {
   return (
     <div>
-      <h1>Pure Component</h1>
+      <h1>Impure Component</h1>
         <div>
             <h3>Example 01</h3>
-            <CounterFun/>
             <CounterFun/>
             <CounterFun/>
             <CounterFun/>
@@ -18,7 +17,7 @@ function ImpureComponent() {
 }
 
 function CounterFun (){
-    let Counter = Count+2
-    return (<h1>Counter: {Counter} </h1>);
+    let Counter = Count++
+    return <h1>Counter:{Counter}</h1>;
 }
 export default ImpureComponent;
