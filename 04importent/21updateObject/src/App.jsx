@@ -1,33 +1,54 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [data, setData] = useState({
+    name : "Sujit Tomar",
+    address : {
+      city : "Patna",
+      country : "India",
+    },
+  })
+
+  const handleChange = (event)=>{
+    const {name, value} = event.target
+    // const name = event.target.name
+    // const value = event.target.value
+    console.log(event.target.name)
+    console.log(event.target.value)
+
+
+    if(name === 'name'){
+      setData((prev)=>({
+        ...prev,
+        name : value,
+
+      }));
+    }else if (name === 'city' || name === 'country'){
+      setData((prev) => ({
+        ...prev,
+        address : {
+          ...prev.address,
+          [name] : value,
+        }
+      }
+      ))
+    }
+  }
+
 
   return (
     <>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <h1>Update Object in State</h1>
+        <input type="text" placeholder='Enter Name' name='name' onChange={handleChange} />
+        <input type="text" placeholder='Enter City' name='city' onChange={handleChange}/>
+        <input type="text" placeholder='Enter Country' name='country' onChange={handleChange}/>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div>
+        <p>Name : {data.name}</p>
+        <p>City : {data.address.city}</p>
+        <p>Country : {data.address.country}</p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
