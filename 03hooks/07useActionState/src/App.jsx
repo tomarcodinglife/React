@@ -1,4 +1,13 @@
+import { useEffect } from "react";
 import { useState, useActionState } from "react";
+
+let msgErrorColor = {
+  color : 'red'
+}
+
+let msgColor = {
+  color : 'green'
+}
 
 const handlSubmit = async (prevData, formData) => {
   let username = formData.get("username");
@@ -7,15 +16,15 @@ const handlSubmit = async (prevData, formData) => {
   // console.log("Handle Submit Called", username, password);
 
   if (username && password) {
-    return message("Data Submited");
+    return {Message : 'Submitted'};
   } else {
-    return Error("Please Enter Correct Username & Password");
+    return {Error : "Please Enter Correct Details"};
   }
 };
 
-function showMessage(message) {
-  return <h3>{message}</h3>;
-}
+// function showMessage(message) {
+//   return <h3>{message}</h3>;
+// }
 
 function App() {
   const [msg, setMsg] = useState(0);
@@ -44,8 +53,13 @@ function App() {
           <br />
           <br />
           <button disabled={pending}>Login</button>
-          <span></span>
         </form>
+        {
+          data?.Error && <span style={msgErrorColor}>{data?.Error}</span>
+        }
+        {
+          data?.Message && <span style={msgColor}>{data?.Message}</span>
+        }
       </div>
     </>
   );
