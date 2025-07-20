@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useState, useActionState } from "react";
 
 let msgErrorColor = {
@@ -27,7 +26,6 @@ const handlSubmit = async (prevData, formData) => {
 // }
 
 function App() {
-  const [msg, setMsg] = useState(0);
   const [data, action, pending] = useActionState(handlSubmit, undefined);
   console.log(data)
 
