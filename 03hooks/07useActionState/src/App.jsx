@@ -15,7 +15,10 @@ const handlSubmit = async (prevData, formData) => {
   // console.log("Handle Submit Called", username, password);
 
   if (username && password) {
-    return {Message : 'Submitted'};
+    return { Message : 'Submitted',
+             username :  username,
+             password : password
+          }
   } else {
     return {Error : "Please Enter Correct Details"};
   }
@@ -39,6 +42,7 @@ function App() {
             placeholder="Enter Username"
             name="username"
             autoComplete="current-username"
+            defaultValue={data?.username}
           />
           <br />
           <br />
@@ -47,6 +51,7 @@ function App() {
             placeholder="Enter Password"
             name="password"
             autoComplete="current-password"
+            defaultValue={data?.password}
           />
           <br />
           <br />
@@ -58,6 +63,10 @@ function App() {
         {
           data?.Message && <span style={msgColor}>{data?.Message}</span>
         }
+
+        <h3>Name : {data?.username}</h3>
+        <br />
+        <h3>Password : {data?.password}</h3>
       </div>
     </>
   );
