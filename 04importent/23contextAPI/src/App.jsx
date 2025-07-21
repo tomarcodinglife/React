@@ -7,10 +7,7 @@ let divStyle = {
   padding: "10px",
   borderRadius: "15px",
   border: "5px solid black",
-};
-
-
-
+}; 
 
 function App() {
   const [NewSubject, setNewSubject] = useState('Hindi')
