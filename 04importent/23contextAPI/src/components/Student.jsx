@@ -1,4 +1,4 @@
-import {Subject} from './Subject'
+import Subject from './Subject.jsx'
 
 let divStyle = {
   backgroundColor: "#ffe000",
@@ -7,7 +7,7 @@ let divStyle = {
   border: "1px solid black",
 };
 
-export default function Student(){
+function Student(){
     return (
         <div style={divStyle}>
             <h1>Student Component</h1>
@@ -15,3 +15,5 @@ export default function Student(){
         </div>
     )
 }
+
+export default Student

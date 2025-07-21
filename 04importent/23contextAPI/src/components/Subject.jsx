@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import {SubjectContext} from '../context/SubjectContext.jsx'
+import SubjectContext from '../context/SubjectContext.jsx'
 
 
 let divStyle = {
@@ -9,7 +9,7 @@ let divStyle = {
   border: "1px solid black",
 };
 
-export default function Subject(){
+function Subject(){
     const subject = useContext(SubjectContext)
     return (
         <div style={divStyle}>
@@ -17,3 +17,5 @@ export default function Subject(){
         </div>
     )
 }
+
+export default Subject

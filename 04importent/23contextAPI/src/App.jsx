@@ -1,5 +1,5 @@
 import { useState } from "react";
-import College from "./components/College";
+import College from "./components/College.jsx";
 
 let divStyle = {
   backgroundColor: "yellow",
@@ -15,7 +15,7 @@ function App() {
     <>
       <div style={divStyle}>
         <h2>Context API</h2>
-        {/* <College /> */}
+        <College />
       </div>
     </>
   );

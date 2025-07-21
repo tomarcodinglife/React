@@ -1,4 +1,4 @@
-import {ClassComponent} from './ClassComponent'
+import ClassComponent from './ClassComponent'
 
 let divStyle = {
   backgroundColor: "#ff8700",
@@ -7,7 +7,7 @@ let divStyle = {
   border: "1px solid black",
 };
 
-export default function College(){
+function College(){
     return (
         <div style={divStyle}>
             <h1>College Component</h1>
@@ -15,3 +15,5 @@ export default function College(){
         </div>
     )
 }
+
+export default College;
