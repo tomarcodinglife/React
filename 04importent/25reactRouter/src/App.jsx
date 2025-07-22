@@ -20,6 +20,7 @@ function App() {
         <Route path="/About" element={<h1>About</h1>}/>
         <Route path="/Contact" element={<h1>Contact</h1>}/>
         <Route path="/Login" element={<h1>Login</h1>}/>
+        <Route path="/*" element={<h1>Page not found</h1>}/>
       </Routes>
     </>
   );
