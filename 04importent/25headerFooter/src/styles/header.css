@@ -1,0 +1,65 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.Header {
+    background-color : #181724;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.my-Header {    
+    display: flex;
+    padding: 5px;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.tata-group-logo {
+    height: 40px;
+    margin: 0;
+    display: block;
+    object-fit: contain;
+    padding-right: 100px;
+    padding-left: 50px;
+}
+
+.container {
+    display: flex;
+    padding-right: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.tata-elaxi-logo {
+    height: 25px;
+    margin: 0;
+    padding-left: 100px;
+    display: block;
+    object-fit: contain;
+}
+
+
+
+.link-list > ul {
+    display: flex;
+    color: rgb(255, 255, 255);
+    align-items: end;
+}
+
+.link-list > ul > li {
+    list-style: none;
+    color: #ffffff;
+    font-weight: 200;
+    text-decoration: none;
+    padding-left: 50px;
+}
+
+.link-list > ul > li > .link {
+    color: #ffffff;
+    text-decoration: none;
+}
+
