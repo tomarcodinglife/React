@@ -1,7 +1,7 @@
 
 
 function Contact () {
-    retunr (
+    return (
         <h1>Contact</h1>
     )
 }

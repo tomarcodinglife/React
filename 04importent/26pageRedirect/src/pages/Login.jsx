@@ -1,7 +1,7 @@
 
 
 function Login () {
-    retunr (
+    return (
         <h1>Login</h1>
     )
 }

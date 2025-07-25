@@ -1,7 +1,7 @@
 
 
 function Career () {
-    retunr (
+    return (
         <h1>Career</h1>
     )
 }

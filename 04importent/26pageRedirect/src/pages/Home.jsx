@@ -1,7 +1,7 @@
 
 
 function Home () {
-    retunr (
+    return (
         <h1>Home</h1>
     )
 }

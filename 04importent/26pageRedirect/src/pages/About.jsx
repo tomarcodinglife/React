@@ -1,7 +1,7 @@
 
 
 function About () {
-    retunr (
+    return (
         <h1>About</h1>
     )
 }

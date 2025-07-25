@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+
+.header {
+    display: flex;
+    background-color: rgb(19, 19, 19);
+    height: 50px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.Logo{
+    padding-left: 5em;
+    color: rgb(246, 185, 0);
+    margin: 0.5rem;
+}
+
+.Link-Container{
+    /* background-color: rgb(246, 185, 0); */
+    border-radius: 0.5em;
+    margin-right: 5em;
+    height:max-content;
+    justify-content: center;
+    align-items: center;
+    padding: 0.25em;
+    padding-right: 2em;
+}
+
+.Link-List {
+    display: flex;
+    list-style: none;
+    padding: 0.25rem;
+}
+
+.Link-List > li {
+    margin-left: 2em;
+    text-decoration: none;
+   
+}
+
+.Link-List > li > .link {
+     color: rgb(246, 185, 0);
+     text-decoration: none;
+}
