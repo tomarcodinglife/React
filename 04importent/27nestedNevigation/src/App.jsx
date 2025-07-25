@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Header from './components/Header'
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
 import Courses from './pages/courses'
@@ -17,11 +17,12 @@ function App() {
       <Header/>
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/' element={<About/>}/>
-        <Route path='/' element={<Courses/>}/>
-        <Route path='/' element={<Contact/>}/>
-        <Route path='/' element={<Career/>}/>
-        <Route path='/' element={<Login/>}/>
+        <Route path='/about' element={<About/>}/>
+        <Route path='/courses' element={<Courses/>}/>
+        <Route path='/contact' element={<Contact/>}/>
+        <Route path='/career' element={<Career/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/*' element={<Navigate to={'/'}/>}/>
       </Routes>
     </>
   )

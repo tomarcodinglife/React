@@ -5,12 +5,12 @@ import { Link } from "react-router-dom"
 function Header () {
     return (
         <>
-            <div>
+            <div className="header">
                 <div className="Logo">
                     <h1>LOGO</h1>
                 </div>
-                <div>
-                    <ul>
+                <div className="link-container">
+                    <ul className="link-list">
                         <li>
                             <Link className="link" to={'/'}>Home</Link>
                         </li>
