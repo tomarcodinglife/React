@@ -35,7 +35,6 @@ function Header() {
                 </li>
                 <li>
                   <Link className="link" to="/careers">
-                    {" "}
                     Careers
                   </Link>
                 </li>
