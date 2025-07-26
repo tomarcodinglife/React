@@ -1,0 +1,44 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+  justify-content: center;
+  text-align: center;
+  padding: 2em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.head-Style {
+  align-items: center;
+  justify-Content: center;
+  text-align: center;
+  margin-top: 2em;
+}
+
+.linkContainerStyle{
+  margin: 2em;
+  background-color: darkRed;
+  padding: 1em;
+  border-radius: 1em;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 800;
+}
+
+.myLink{
+    color : white;
+    text-decoration: none;
+    font-size: 1em;
+    text-transform: uppercase;
+    margin-left: 2em;
+}

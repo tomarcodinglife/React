@@ -7,6 +7,9 @@ import Courses from './pages/courses'
 import Career from './pages/Career'
 import Login from './pages/Login'
 import Contact from './pages/contact'
+import Student from './pages/login/Student'
+import College from './pages/login/College'
+import University from './pages/login/University'
 
 
 function App() {
@@ -21,7 +24,16 @@ function App() {
         <Route path='/courses' element={<Courses/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/career' element={<Career/>}/>
-        <Route path='/login' element={<Login/>}/>
+
+        <Route path='/login' element={<Login/>}>
+          <Route path='college' element={<College/>}/>
+          
+          {/* index use for default page open at click when i go to login than student login page opent*/}
+          <Route index element={<Student/>}/>  
+
+          <Route path='university' element={<University/>}/>
+        </Route>
+
         <Route path='/*' element={<Navigate to={'/'}/>}/>
       </Routes>
     </>
