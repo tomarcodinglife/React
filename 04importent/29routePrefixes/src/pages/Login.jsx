@@ -7,6 +7,7 @@ function Login (){
                 <h1>Login</h1>
             </div>
             <div style={{textAlign:"center", textDecoration:'none'}}>
+                {/* below user is prefix for signin, signup and forgate page */}
                 <NavLink to={"/user"}> Sign In</NavLink>
                 <NavLink to={'/user/signup'} style={{marginLeft:"2em", marginRight:"2em"}}> Sign Up</NavLink>
                 <NavLink to={'/user/forgatepassword'}> Forgate Password</NavLink>

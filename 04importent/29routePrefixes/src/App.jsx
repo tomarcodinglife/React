@@ -23,6 +23,7 @@ function App() {
               <Route path='/courses' element={<Courses/>}/>
               <Route path='/contact' element={<Contact/>}/>
               <Route path='/user' element={<Login/>}/>
+              {/* below user is prefix for signin, signup and forgate page */}
               <Route path='user' element={<Login/>}>
                   <Route index element={<SignIn/>}/>
                   <Route path='/user/signup' element={<SignUp/>}/>
