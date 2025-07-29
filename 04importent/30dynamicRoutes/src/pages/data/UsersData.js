@@ -1,5 +1,5 @@
 
-const Data = [
+const UsersData = [
     {
         id : "01",
         roll : "012",
@@ -19,3 +19,5 @@ const Data = [
         college : "IIM Pune"
     }, 
 ]
+
+export default UsersData

@@ -41,7 +41,7 @@ function Header() {
         </div>
       </div>
       <div>
-        <Outlet />
+        <Outlet/>
       </div>
     </>
   );
