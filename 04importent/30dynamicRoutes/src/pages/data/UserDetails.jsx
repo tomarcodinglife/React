@@ -16,7 +16,7 @@ function UserDetails () {
         <>
             <h1>{name} Details</h1>
             <p>Roll No. {roll}</p>
-            <p>College {college}</p>
+            <p>College. {college}</p>
         </>
     )
 }
