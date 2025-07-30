@@ -1,5 +1,5 @@
 
-let Users = [
+let UsersData = [
     {
         Id : '01',
         Name : 'Amit Kumar',
@@ -23,4 +23,4 @@ let Users = [
     }
 ]
 
-export default Users
+export default UsersData

@@ -13,6 +13,8 @@ function Header() {
             <Link to={"/courses"} style={{color:'white', marginLeft:'1em'}}> Course </Link>
             <Link to={"/contact"} style={{color:'white', marginLeft:'1em'}}> Contact </Link>
             <Link to={"/login"} style={{color:'white', marginLeft:'1em'}}> Login </Link>
+            <Link to={"/users"} style={{color:'white', marginLeft:'1em'}}> Users </Link>
+            <Link to={"/users/list"} style={{color:'white', marginLeft:'1em'}}> List </Link>
             </div>
         </div>
       <div>

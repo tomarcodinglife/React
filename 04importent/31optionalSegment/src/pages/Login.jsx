@@ -1,3 +1,5 @@
+import UserList from "../components/UserList"
+
 
 function Login () {
 
@@ -5,6 +7,7 @@ function Login () {
     return (
         <>
             <h1> Login Page </h1>
+            <UserList/>
         </>
     )
 }

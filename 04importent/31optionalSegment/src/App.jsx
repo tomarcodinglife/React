@@ -6,6 +6,9 @@ import About from './pages/About'
 import Courses from './pages/Courses'
 import Contact from './pages/Contact'
 import Login from './pages/Login'
+import Users from './pages/Users'
+import UserList from './components/UserList'
+import UserDetails from './components/UserDetails'
 
 
 function App() {
@@ -19,6 +22,11 @@ function App() {
           <Route path='/courses' element={<Courses/>}/>
           <Route path='/contact' element={<Contact/>}/>
           <Route path='/login' element={<Login/>}/>
+ 
+          {/* Static Option  */}
+          <Route path='/users/list?' element={<Users/>}/>
+          {/* dynamic route */}
+          <Route path='/users/:id/:name?' element={<UserDetails/>}/>
       </Routes>
     </>
   )
