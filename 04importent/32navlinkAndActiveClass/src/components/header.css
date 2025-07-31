@@ -1,8 +1,16 @@
 
-.Active {
-    color: #f6c500;
+
+
+.Link {
+    color: #ffffff;
+    margin-right: 1em;
+    text-decoration: none;
 }
 
-.Inactive {
-    color: #000000;
+
+.Active {
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: #ff9500;
+    text-decoration: none;
 }
