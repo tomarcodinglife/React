@@ -1,4 +1,12 @@
 import { useState } from 'react'
+import Header from './Components/Header'
+import { Route, Routes } from 'react-router'
+import Home from './Pages/Home'
+import About from './Pages/About'
+import Courses from './Pages/Courses'
+import Contact from './Pages/Contact'
+import Login from './Pages/Login'
+import Users from './Pages/Users'
 
 
 function App() {
@@ -6,9 +14,15 @@ function App() {
 
   return (
     <>
-      <div>
-        <h1>Test v</h1>
-      </div>
+      <Header/>
+      <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/about' element={<About/>}/>
+          <Route path='/courses' element={<Courses/>}/>
+          <Route path='/contact' element={<Contact/>}/>
+          <Route path='/login' element={<Login/>}/>
+          <Route path='/users' element={<Users/>}/>
+      </Routes>
     </>
   )
 }
