@@ -6,7 +6,7 @@ let Linkstyle = {
     marginRight:'1em',
 }
 
-export default Header = () => {
+export default function Header () {
     return (
         <>
             <div style={{display:'flex', backgroundColor:'black', justifyContent:'space-around', alignItems:'center', borderRadius:'1em'}}>
