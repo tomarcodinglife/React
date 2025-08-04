@@ -7,6 +7,8 @@ import Courses from './Pages/Courses'
 import Contact from './Pages/Contact'
 import Login from './Pages/Login'
 import Users from './Pages/Users'
+import ListUsers from './Pages/users/ListUsers'
+import EditUsers from './Pages/users/EditUser'
 
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
           <Route path='/contact' element={<Contact/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/users' element={<Users/>}/>
+          <Route path='/listusers' element={<ListUsers/>}/>
+          <Route path='/edit/:id?' element={<EditUsers/>}/>
       </Routes>
     </>
   )

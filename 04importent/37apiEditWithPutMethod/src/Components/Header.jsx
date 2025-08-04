@@ -20,6 +20,7 @@ export default function Header () {
                     <NavLink to={'/contact'} style={Linkstyle}>Contact</NavLink>
                     <NavLink to={'/login'} style={Linkstyle}>Login</NavLink>
                     <NavLink to={'/users'} style={Linkstyle}>Users</NavLink>
+                    <NavLink to={'/listusers'} style={Linkstyle}>List Users</NavLink>
                 </div>
             </div>
         </>
