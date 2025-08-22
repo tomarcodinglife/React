@@ -36,7 +36,7 @@ npm run dev
     </>
 ```
 
-# Tailwind Install (vite)
+# Tailwind Install (vite).
 
 ## Install Tailwind CSS
 Install tailwindcss and @tailwindcss/vite via npm.
